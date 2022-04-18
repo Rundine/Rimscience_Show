@@ -309,6 +309,11 @@ $(document).off("pageshow", "#start").on("pageshow", "#start", function(event, u
     $("#btn_start").focus();
 });
 
+$(document).on("click", "btn", function(){
+    var idx = $(this).index();
+    
+    alert('버튼 {}을 눌렀습니다.'.replace('{}', idx))
+});
 
 
 function test_message(input_device){
@@ -355,7 +360,10 @@ function test_message(input_device){
         document.getElementById("TEST6").className = "main_grid_top_2";
 
         var btn = document.createElement("BUTTON");
+        var t = document.createTextNode("Click Me");
+        btn.appendChild(t);
         document.getElementById("test_detail").appendChild(btn);
+        //document.getElementById("test_detail").appendChild(btn);
         viewTest("버튼 검사", 
         "버튼을 아래 순서대로 누르고 결과(정상 동작시 괄호안에 O표시 됨)를 확인한다. <br><br>" +
         " 전진 버튼 : (" + input[5].substr(3,1) + ") <br>" + 
