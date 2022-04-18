@@ -308,28 +308,6 @@ $(document).off("pageshow", "#start").on("pageshow", "#start", function(event, u
     $("#btn_start").focus();
 });
 
-
-$(function(){
-    $("number_of_use").bind("click",function(){
-        if($("number_of_use").val==0){
-            
-        }
-        else{
-            $("number_of_use").val(0);
-        }
-        
-        var isHide=$("number_of_use").val();
-        if(isHide==0){
-            // 버튼 숨기기
-            $("number_of_use").hide();
-        }
-        else{
-            $("number_of_use").show();
-        }
-    })
-});
-
-
 function test_message(input_device){
 
     var input = input_device.split('\t'); 
@@ -450,8 +428,7 @@ function test_message(input_device){
             document.getElementById("TEST5").className = "main_grid_top_2_clear"; // 사용 횟수
             document.getElementById("TEST6").className = "main_grid_top_2_run";
             viewTest("사용 횟수", 
-            "검사자는 사용 횟수 확인 <br> <font color='red'> (기본 1회) </font><br><br>" +
-            document.getElementById("number_of_use", isHide=1));
+            "검사자는 사용 횟수 확인 <br> <font color='red'> (기본 1회) </font><br><br>");
             break;
         case 'T6':
             document.getElementById("TEST1").className = "main_grid_top_2_clear";
