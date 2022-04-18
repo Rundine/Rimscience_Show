@@ -361,8 +361,8 @@ function test_message(input_device){
         " <font color='red' size='5'>불량 기준 및 대처 방안 </font><br>" +
                 " 검사자가 버튼을 누르기 전 O 표시가 되어있음 <br>" +
                 "&nbsp&nbsp>버튼을 눌러보며 눌리는 소리가 나는지 확인하고, 버튼과 스위치 노브간 결합을 확인한다. ");
-        document.createElement('Button') + "<br><br>" +
-        document.createElement('box') 
+        document.createElement("button");
+        document.createElement("box");
             break;
         case 'T2':
             document.getElementById("TEST1").className = "main_grid_top_2_clear";
