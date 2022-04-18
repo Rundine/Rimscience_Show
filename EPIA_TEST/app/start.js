@@ -368,7 +368,7 @@ function test_message(input_device){
             document.getElementById("TEST2").className = "main_grid_top_2_clear";
             document.getElementById("TEST3").className = "main_grid_top_2_run";
             document.getElementById("TEST4").className = "main_grid_top_2";
-            document.getElementById("TEST5").className = "main_grid_top_2"; // 사용 횟수
+            document.getElementById("TEST5").className = "main_grid_top_2_clear"; // 사용 횟수
             document.getElementById("TEST6").className = "main_grid_top_2";
             viewTest("센서 검사", 
             "센서를 손으로 힘을 가해보며 값의 변화를 검사한다. 정상 동작시 전진버튼을 누르면 다음 단계로 넘어갑니다. <br><br>" +
@@ -385,7 +385,7 @@ function test_message(input_device){
             document.getElementById("TEST2").className = "main_grid_top_2_clear";
             document.getElementById("TEST3").className = "main_grid_top_2_clear";
             document.getElementById("TEST4").className = "main_grid_top_2_run";  
-            document.getElementById("TEST5").className = "main_grid_top_2"; // 사용 횟수
+            document.getElementById("TEST5").className = "main_grid_top_2_clear"; // 사용 횟수
             document.getElementById("TEST6").className = "main_grid_top_2";      
             viewTest("모터 검사1", 
             "자동으로 모터가 회전하며 최대 행정거리까지 이동합니다. <br><br>" +
