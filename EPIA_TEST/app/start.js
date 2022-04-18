@@ -309,28 +309,6 @@ $(document).off("pageshow", "#start").on("pageshow", "#start", function(event, u
 });
 
 
-$(function(){
-    $("#number_of_use").bind("click", function(){
-
-        if($("number_of_use").val()==0){
-            $("number_of_use").val(1); 
-        }
-        else{
-            $("number_of_use").val(0);
-        }
-        var isHide=$("#toggle_id").val();
-        if(isHide==1){
-            // Button 숨기기
-            $("#admin_id").hide();
-        }
-        else{
-            // Button 보이기
-            $("#admin_id").show();
-        }
-    });
-
-});
-
 function test_message(input_device){
 
     var input = input_device.split('\t'); 
@@ -429,6 +407,7 @@ function test_message(input_device){
             document.getElementById("TEST4").className = "main_grid_top_2_clear";
             document.getElementById("TEST5").className = "main_grid_top_2_run"; // 사용 횟수
             document.getElementById("TEST6").className = "main_grid_top_2";
+            document.getElementById("number_of_use").hide();
             viewTest("모터 검사2", 
             "검사자는 이동거리 및 시간의 변화를 확인하고 이상 없을시 후진버튼을 눌러 구동부를 뒤로 이동시킵니다. <br><br>" +
             " 이동거리 :  " + input[2] + "  [ mm ] <br>" +  
@@ -452,7 +431,7 @@ function test_message(input_device){
             document.getElementById("TEST6").className = "main_grid_top_2_run";
             viewTest("사용 횟수", 
             "검사자는 사용 횟수 확인 <br> <font color='red'> (기본 1회) </font><br><br>" +
-            document.getElementById("number_of_use").isHide(0));
+            document.getElementById("number_of_use").show());
             break;
         case 'T6':
             document.getElementById("TEST1").className = "main_grid_top_2_clear";
