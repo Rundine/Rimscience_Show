@@ -75,7 +75,8 @@ function listener(event) {
         "검사 기기 ( " + product + " ) <br>" + 
         "F/W Version ( " +  FWversion + ver  +  " ) <br>" + 
         "사용횟수 : "  + Math.round(Number(testArray%1 * 100)) + " 회<br><br>" +
-        "검사 모드로 동작시켜주세요.<br> 정지버튼 누른상태에서 후진버튼 5회 누르면 검사모드로 동작됩니다. <br>" );
+        "검사 모드로 동작시켜주세요.<br> 정지버튼 누른상태에서 후진버튼 5회 누르면 검사모드로 동작됩니다. <br>" + 
+        jbBtn);
 
     }
     else {
