@@ -308,6 +308,8 @@ $(document).off("pageshow", "#start").on("pageshow", "#start", function(event, u
     $("#btn_start").focus();
 });
 
+
+
 function test_message(input_device){
 
     var input = input_device.split('\t'); 
@@ -438,8 +440,7 @@ function test_message(input_device){
             document.getElementById("TEST5").className = "main_grid_top_2_clear"; // 사용 횟수
             document.getElementById("TEST6").className = "main_grid_top_2_clear";
             viewTest("검사 완료", 
-            "제품 검사 완료. <br> 데이터 송신관련 테스트는 우측 wRITING TEST 버튼을 눌러주세요.[option] <br><br>" + 
-            "");
+            "제품 검사 완료. <br> 데이터 송신관련 테스트는 우측 wRITING TEST 버튼을 눌러주세요.[option] <br><br>" );
             break;
         default:
 
