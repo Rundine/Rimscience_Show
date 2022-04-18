@@ -347,8 +347,8 @@ function test_message(input_device){
             break;
         case 'T1':            
         document.getElementById("TEST1").className = "main_grid_top_2_clear";
-        document.getElementById("TEST2").className = "main_grid_top_2_clear";
-        document.getElementById("TEST3").className = "main_grid_top_2_run";
+        document.getElementById("TEST2").className = "main_grid_top_2_run";
+        document.getElementById("TEST3").className = "main_grid_top_2";
         document.getElementById("TEST4").className = "main_grid_top_2";
         document.getElementById("TEST5").className = "main_grid_top_2"; // 사용 횟수
         document.getElementById("TEST6").className = "main_grid_top_2";
