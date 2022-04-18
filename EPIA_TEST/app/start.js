@@ -354,21 +354,19 @@ function test_message(input_device){
         document.getElementById("TEST5").className = "main_grid_top_2"; // 사용 횟수
         document.getElementById("TEST6").className = "main_grid_top_2";
 
-        var btnupdate = document.createElement('input');
-        btnupdate.setAttribute('id', 'mybtn');
-        btnupdate.setAttribute('type', 'button');
-        btnupdate.setAttribute('value', '저장');
-        btnupdate.onclick = function() {  alert('tset');  };
-
-        document.getElementById("test_id").appendChild(btnupdate);
+        let btn = document.createElement("button");
+        btn.innerHTML = "Submit";
+        btn.type = "submit";
+        btn.name = "formBtn";
+        document.body.appendChild(btn);
 
         viewTest("버튼 검사", 
         "버튼을 아래 순서대로 누르고 결과(정상 동작시 괄호안에 O표시 됨)를 확인한다. <br><br>" +
         " 전진 버튼 : (" + input[5].substr(3,1) + ") <br>" + 
         " 미세전진 버튼 : (" + input[5].substr(2,1) + ") <br>" + 
         " 정지 버튼 : (" + input[5].substr(1,1) + ") <br>" + 
-        " 후진 버튼 : (" + input[5].substr(0,1) + ") <br><br>" + btn +
-        " <font color='red' size='5'>불량 기준 및 대처 방안 </font><br>" + btnupdate +
+        " 후진 버튼 : (" + input[5].substr(0,1) + ") <br><br>" + 
+        " <font color='red' size='5'>불량 기준 및 대처 방안 </font><br>" + 
                 " 검사자가 버튼을 누르기 전 O 표시가 되어있음 <br>" +
                 "&nbsp&nbsp>버튼을 눌러보며 눌리는 소리가 나는지 확인하고, 버튼과 스위치 노브간 결합을 확인한다. ");
 
