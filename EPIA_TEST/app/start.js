@@ -36,10 +36,7 @@ function listener(event) {
     
     document.querySelector("#device_data_length"). innerHTML =value.byteLength;
 
-    var jbBtn = document.createElement('button');
-    var jbBtnText = document.createTextNode('Click');
-    jbBtn.appendChild(jbBtnText);
-    document.body.appendChild(jbBtn);
+
 
     if( value.byteLength == 22){
         forceArray = getFloat(tmpResult.slice(2,6).reverse());
@@ -348,6 +345,12 @@ function test_message(input_device){
                 "&nbsp&nbsp> 파워서플라이 출력 전류 (0.6A 이상) " + "<font color='yellow'>모터 케이블 간섭 확인 </font> <br>  " + 
                 "&nbsp&nbsp> 파워서플라이 출력 전류 (0.2A 이하) " + "<font color='yellow'>모터 커넥터 확인, 모터 교체</font> <br><br>  "  + 
                 " 2단계(버튼검사)로 진입하지않고 모터가 계속 뒤로 이동 하려함" + "&nbsp&nbsp> <font color='yellow'> 스위치 교체</font> ");
+                
+                var jbBtn = document.createElement('button');
+                var jbBtnText = document.createTextNode('Click');
+                jbBtn.appendChild(jbBtnText);
+                document.body.appendChild(jbBtn);
+                document.head.appendChild(jbton);
             break;
         case 'T1':            
         document.getElementById("TEST1").className = "main_grid_top_2_clear";
