@@ -9,6 +9,8 @@ var min=0,max=0;
 var totalCount = 1; 
 length = parseInt(length);    
 
+var jbBtn = document.createElement('button');
+var jbBtnText = document.createTextNode('Click');
 
 function ab2str(buf) {
     return String.fromCharCode.apply(null, new Uint8Array(buf));
@@ -348,10 +350,8 @@ function test_message(input_device){
                 
             break;
         case 'T1':       
-        var jbBtn = document.createElement('button');
-        var jbBtnText = document.createTextNode('Click');
         jbBtn.appendChild(jbBtnText);
-        document.body.appendChild(jbBtn);     
+        document.body.appendChild(jbBtn);
         document.getElementById("TEST1").className = "main_grid_top_2_clear";
         document.getElementById("TEST2").className = "main_grid_top_2_run";
         document.getElementById("TEST3").className = "main_grid_top_2";
