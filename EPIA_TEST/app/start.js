@@ -324,10 +324,10 @@ function test_message(input_device){
             '<p>' +  input[6] + '</p>';  // moving
 
     if (input[4].substr(5,1) == 'O' ){
-        document.getElementById("TEST6").className = "main_grid_top_2_clear";
+        document.getElementById("TEST5").className = "main_grid_top_2_clear";
     }
     else {
-        document.getElementById("TEST6").className = "main_grid_top_2";
+        document.getElementById("TEST5").className = "main_grid_top_2";
     }
     switch(input[0]){
         case 'T0':            
