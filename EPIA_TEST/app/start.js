@@ -355,16 +355,14 @@ function test_message(input_device){
         document.getElementById("TEST6").className = "main_grid_top_2";
 
         var btn = document.createElement("BUTTON");
-        var t = document.createTextNode("CLICK ME");       // Create a text node
-        btn.appendChild(t);                                // Append the text to <button>
-        document.getElementById("test_detail").appendChild(btn);
+        btn.innerText = 'this button'       // Create a text node
+        document.getElementById('test_detail').appendChild(btn);
         viewTest("버튼 검사", 
         "버튼을 아래 순서대로 누르고 결과(정상 동작시 괄호안에 O표시 됨)를 확인한다. <br><br>" +
         " 전진 버튼 : (" + input[5].substr(3,1) + ") <br>" + 
         " 미세전진 버튼 : (" + input[5].substr(2,1) + ") <br>" + 
         " 정지 버튼 : (" + input[5].substr(1,1) + ") <br>" + 
         " 후진 버튼 : (" + input[5].substr(0,1) + ") <br><br>" + 
-        btn +
         " <font color='red' size='5'>불량 기준 및 대처 방안 </font><br>" +
                 " 검사자가 버튼을 누르기 전 O 표시가 되어있음 <br>" +
                 "&nbsp&nbsp>버튼을 눌러보며 눌리는 소리가 나는지 확인하고, 버튼과 스위치 노브간 결합을 확인한다. ");
@@ -416,7 +414,6 @@ function test_message(input_device){
             document.getElementById("TEST4").className = "main_grid_top_2_clear";
             document.getElementById("TEST5").className = "main_grid_top_2_run"; // 사용 횟수
             document.getElementById("TEST6").className = "main_grid_top_2";
-            document.getElementById("number_of_use").hide();
             viewTest("모터 검사2", 
             "검사자는 이동거리 및 시간의 변화를 확인하고 이상 없을시 후진버튼을 눌러 구동부를 뒤로 이동시킵니다. <br><br>" +
             " 이동거리 :  " + input[2] + "  [ mm ] <br>" +  
