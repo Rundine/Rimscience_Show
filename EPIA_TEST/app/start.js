@@ -419,7 +419,7 @@ function test_message(input_device){
                     "&nbsp&nbsp > <font color='yellow'> 재시험시 동일한 증상의 경우 모터를 교체한다. </font> <br>" + 
                     " 이동시간이 28초 이상 <br>" +
                     "&nbsp&nbsp > <font color='yellow'> 모터에 부하가 생기는 요소를 확인한다 (전선이 걸려 부하가 생김) </font> <br>" + 
-                    "&nbsp&nbsp > <font color='yellow'> 부하 요소가 없을 경우 모터를 교체한다. </font> <br>" );
+                    "&nbsp&nbsp > <font color='yellow'> 부하 요소가 없을 경우 모터를 교체한다. 으잉이이이이이이이이 </font> <br>" );
 
             break;
         case 'T5':
