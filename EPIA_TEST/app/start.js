@@ -451,7 +451,7 @@ function test_message(input_device){
             document.getElementById("TEST6").className = "main_grid_top_2_run";
             viewTest("사용 횟수", 
             "검사자는 사용 횟수 확인 <br> <font color='red'> (기본 1회) </font><br><br>" +
-            document.getElementById("number_of_use", value=1));
+            document.getElementById("number_of_use", isHide=1));
             break;
         case 'T6':
             document.getElementById("TEST1").className = "main_grid_top_2_clear";
