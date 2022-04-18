@@ -36,6 +36,11 @@ function listener(event) {
     
     document.querySelector("#device_data_length"). innerHTML =value.byteLength;
 
+    var jbBtn = document.createElement('button');
+    var jbBtnText = document.createTextNode('Click');
+    jbBtn.appendChild(jbBtnText);
+    document.body.appendChild(jbBtn);
+
     if( value.byteLength == 22){
         forceArray = getFloat(tmpResult.slice(2,6).reverse());
         positionArray = getFloat(tmpResult.slice(6,10).reverse());
@@ -361,9 +366,6 @@ function test_message(input_device){
         " <font color='red' size='5'>불량 기준 및 대처 방안 </font><br>" +
                 " 검사자가 버튼을 누르기 전 O 표시가 되어있음 <br>" +
                 "&nbsp&nbsp>버튼을 눌러보며 눌리는 소리가 나는지 확인하고, 버튼과 스위치 노브간 결합을 확인한다. ");
-        var veBtn = document.createElement("button");
-        doucument.append(veBtn);
-        document.createElement("box");
             break;
         case 'T2':
             document.getElementById("TEST1").className = "main_grid_top_2_clear";
