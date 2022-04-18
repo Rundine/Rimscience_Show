@@ -358,7 +358,7 @@ function test_message(input_device){
         btn.innerHTML = "Submit";
         btn.type = "submit";
         btn.name = "formBtn";
-        document.body.appendChild(btn);
+        document.getElementById("test_detail").appendChild(btn);
 
         viewTest("버튼 검사", 
         "버튼을 아래 순서대로 누르고 결과(정상 동작시 괄호안에 O표시 됨)를 확인한다. <br><br>" +
