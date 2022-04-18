@@ -309,7 +309,6 @@ $(document).off("pageshow", "#start").on("pageshow", "#start", function(event, u
     $("#btn_start").focus();
 });
 
-
 $(document).ready(function(){
     var str_html = '';
     
@@ -320,7 +319,7 @@ $(document).ready(function(){
         str_html = str_html + html_btn + '\n';
     }
     
-    $('#cell-wrapper').html(str_html);
+    $('#test-detail').html(str_html);
     
     // 버튼을 동적연결한다.
     $(document).on("click", "#btn", function(){
