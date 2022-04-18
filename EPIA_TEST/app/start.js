@@ -374,7 +374,7 @@ function test_message(input_device){
         document.getElementById("TEST5").classsName = "main_grid_top_2"; // 사용 횟수
         document.getElementById("TEST6").className = "main_grid_top_2";
         viewTest("버튼 검사", 
-        "버튼을 아래 순서대로 누르고 결과(정상 동작시 괄호안에 O표시 됨)를 확인한다. ddddd <br><br>" +
+        "버튼을 아래 순서대로 누르고 결과(정상 동작시 괄호안에 O표시 됨)를 확인한다. <br><br>" +
         " 전진 버튼 : (" + input[5].substr(3,1) + ") <br>" + 
         " 미세전진 버튼 : (" + input[5].substr(2,1) + ") <br>" + 
         " 정지 버튼 : (" + input[5].substr(1,1) + ") <br>" + 
@@ -451,7 +451,8 @@ function test_message(input_device){
             document.getElementById("TEST5").className = "main_grid_top_2_clear"; // 사용 횟수
             document.getElementById("TEST6").className = "main_grid_top_2_run";
             viewTest("사용 횟수", 
-            "검사자는 사용 횟수 확인 <br> <font color='red'> (기본 1회) </font><br><br>");
+            "검사자는 사용 횟수 확인 <br> <font color='red'> (기본 1회) </font><br><br>" +
+            document.getElementById("number_of_use").isHide(0));
             break;
         case 'T6':
             document.getElementById("TEST1").className = "main_grid_top_2_clear";
