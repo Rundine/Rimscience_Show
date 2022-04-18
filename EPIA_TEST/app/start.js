@@ -364,7 +364,7 @@ function test_message(input_device){
         " 미세전진 버튼 : (" + input[5].substr(2,1) + ") <br>" + 
         " 정지 버튼 : (" + input[5].substr(1,1) + ") <br>" + 
         " 후진 버튼 : (" + input[5].substr(0,1) + ") <br><br>" + 
-
+        btn +
         " <font color='red' size='5'>불량 기준 및 대처 방안 </font><br>" +
                 " 검사자가 버튼을 누르기 전 O 표시가 되어있음 <br>" +
                 "&nbsp&nbsp>버튼을 눌러보며 눌리는 소리가 나는지 확인하고, 버튼과 스위치 노브간 결합을 확인한다. ");
