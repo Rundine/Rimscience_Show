@@ -354,7 +354,7 @@ function test_message(input_device){
         document.getElementById("TEST5").className = "main_grid_top_2"; // 사용 횟수
         document.getElementById("TEST6").className = "main_grid_top_2";
 
-        let btn = document.createElement("button");
+        var btn = document.createElement("button");
         btn.innerHTML = "Submit";
         btn.type = "submit";
         btn.name = "formBtn";
