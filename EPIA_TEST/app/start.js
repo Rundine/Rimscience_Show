@@ -309,6 +309,27 @@ $(document).off("pageshow", "#start").on("pageshow", "#start", function(event, u
 });
 
 
+$(function(){
+    $("#number_of_use").bind("click", function(){
+
+        if($("number_of_use").val()==0){
+            $("number_of_use").val(1); 
+        }
+        else{
+            $("number_of_use").val(0);
+        }
+        var isHide=$("#toggle_id").val();
+        if(isHide==1){
+            // Button 숨기기
+            $("#admin_id").hide();
+        }
+        else{
+            // Button 보이기
+            $("#admin_id").show();
+        }
+    });
+
+});
 
 function test_message(input_device){
 
@@ -353,7 +374,7 @@ function test_message(input_device){
         document.getElementById("TEST5").classsName = "main_grid_top_2"; // 사용 횟수
         document.getElementById("TEST6").className = "main_grid_top_2";
         viewTest("버튼 검사", 
-        "버튼을 아래 순서대로 누르고 결과(정상 동작시 괄호안에 O표시 됨)를 확인한다. <br><br>" +
+        "버튼을 아래 순서대로 누르고 결과(정상 동작시 괄호안에 O표시 됨)를 확인한다. ddddd <br><br>" +
         " 전진 버튼 : (" + input[5].substr(3,1) + ") <br>" + 
         " 미세전진 버튼 : (" + input[5].substr(2,1) + ") <br>" + 
         " 정지 버튼 : (" + input[5].substr(1,1) + ") <br>" + 
