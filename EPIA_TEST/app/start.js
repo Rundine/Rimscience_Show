@@ -350,7 +350,7 @@ function test_message(input_device){
         document.getElementById("TEST2").className = "main_grid_top_2_run";
         document.getElementById("TEST3").className = "main_grid_top_2";
         document.getElementById("TEST4").className = "main_grid_top_2";
-        document.getElementById("TEST5").claㅎssName = "main_grid_top_2"; // 사용 횟수
+        document.getElementById("TEST5").classsName = "main_grid_top_2"; // 사용 횟수
         document.getElementById("TEST6").className = "main_grid_top_2";
         viewTest("버튼 검사", 
         "버튼을 아래 순서대로 누르고 결과(정상 동작시 괄호안에 O표시 됨)를 확인한다. <br><br>" +
