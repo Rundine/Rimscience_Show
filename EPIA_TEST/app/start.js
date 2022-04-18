@@ -338,7 +338,7 @@ function test_message(input_device){
         document.getElementById("TEST5").className = "main_grid_top_2"; // 사용 횟수
         document.getElementById("TEST6").className = "main_grid_top_2";
         viewTest("Limit Switch 검사", 
-        "검사모드 시작시 모터가 뒤로 회전하며 리셋스위치를 누르면 다음단계로 넘어갑니다.<br><br>" +
+        "검사모드 시작시 모터가 뒤로 회전하며 리셋스위치를 누르면 다음단계로 넘어갑니다.이ㅏ이이이이<br><br>" +
         " <font color='red' size='5'>불량 기준 및 대처 방안 </font><br>" +
                 " 모터가 동작 안함 <br>" +
                 "&nbsp&nbsp> 파워서플라이 출력 전류 (0.6A 이상) " + "<font color='yellow'>모터 케이블 간섭 확인 </font> <br>  " + 
