@@ -309,11 +309,6 @@ $(document).off("pageshow", "#start").on("pageshow", "#start", function(event, u
     $("#btn_start").focus();
 });
 
-$(document).on("click", "btn", function(){
-    var idx = $(this).index();
-    
-    alert('버튼 {}을 눌렀습니다.'.replace('{}', idx))
-});
 
 
 function test_message(input_device){
@@ -359,18 +354,21 @@ function test_message(input_device){
         document.getElementById("TEST5").className = "main_grid_top_2"; // 사용 횟수
         document.getElementById("TEST6").className = "main_grid_top_2";
 
-        var btn = document.createElement("BUTTON");
-        var t = document.createTextNode("Click Me");
-        btn.appendChild(t);
-        document.getElementById("test_detail").appendChild(btn);
-        //document.getElementById("test_detail").appendChild(btn);
+        var btnupdate = document.createElement('input');
+        btnupdate.setAttribute('id', 'mybtn');
+        btnupdate.setAttribute('type', 'button');
+        btnupdate.setAttribute('value', '저장');
+        btnupdate.onclick = function() {  alert('tset');  };
+
+        document.getElementById("test_id").appendChild(btnupdate);
+
         viewTest("버튼 검사", 
         "버튼을 아래 순서대로 누르고 결과(정상 동작시 괄호안에 O표시 됨)를 확인한다. <br><br>" +
         " 전진 버튼 : (" + input[5].substr(3,1) + ") <br>" + 
         " 미세전진 버튼 : (" + input[5].substr(2,1) + ") <br>" + 
         " 정지 버튼 : (" + input[5].substr(1,1) + ") <br>" + 
         " 후진 버튼 : (" + input[5].substr(0,1) + ") <br><br>" + btn +
-        " <font color='red' size='5'>불량 기준 및 대처 방안 </font><br>" +
+        " <font color='red' size='5'>불량 기준 및 대처 방안 </font><br>" + btnupdate +
                 " 검사자가 버튼을 누르기 전 O 표시가 되어있음 <br>" +
                 "&nbsp&nbsp>버튼을 눌러보며 눌리는 소리가 나는지 확인하고, 버튼과 스위치 노브간 결합을 확인한다. ");
 
