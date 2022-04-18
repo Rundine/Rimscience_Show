@@ -309,26 +309,6 @@ $(document).off("pageshow", "#start").on("pageshow", "#start", function(event, u
     $("#btn_start").focus();
 });
 
-$(document).ready(function(){
-    var str_html = '';
-    
-    // 버튼을 10개 추가한다.
-    for (var i = 0; i < 10; i++) {
-        var html_btn = '<button type="button" class="btn btn-success m-1" id="btn" style="width:100px">버튼{}</button>';
-        html_btn = html_btn.replace('{}', i);
-        str_html = str_html + html_btn + '\n';
-    }
-    
-    $('#test-detail').html(str_html);
-    
-    // 버튼을 동적연결한다.
-    $(document).on("click", "#btn", function(){
-        var idx = $(this).index();
-        
-        alert('버튼 {}을 눌렀습니다.'.replace('{}', idx))
-    });
-    
-});
 
 function test_message(input_device){
     var input = input_device.split('\t'); 
@@ -374,9 +354,7 @@ function test_message(input_device){
         document.getElementById("TEST6").className = "main_grid_top_2";
 
         var btn = document.createElement("button");
-        btn.innerHTML = "Submit";
-        btn.type = "submit";
-        btn.name = "formBtn";
+        btn.innerText = "Submit";
         document.getElementById("test_detail").appendChild(btn);
 
         viewTest("버튼 검사", 
@@ -384,7 +362,7 @@ function test_message(input_device){
         " 전진 버튼 : (" + input[5].substr(3,1) + ") <br>" + 
         " 미세전진 버튼 : (" + input[5].substr(2,1) + ") <br>" + 
         " 정지 버튼 : (" + input[5].substr(1,1) + ") <br>" + 
-        " 후진 버튼 : (" + input[5].substr(0,1) + ") <br><br>" +
+        " 후진 버튼 : (" + input[5].substr(0,1) + ") <br><br>" + btn + 
         " <font color='red' size='5'>불량 기준 및 대처 방안 </font><br>" + 
                 " 검사자가 버튼을 누르기 전 O 표시가 되어있음 <br>" +
                 "&nbsp&nbsp>버튼을 눌러보며 눌리는 소리가 나는지 확인하고, 버튼과 스위치 노브간 결합을 확인한다. ");
