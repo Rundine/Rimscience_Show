@@ -9,9 +9,6 @@ var min=0,max=0;
 var totalCount = 1; 
 length = parseInt(length);    
 
-var jbBtn = document.createElement('button');
-var jbBtnText = document.createTextNode('Click');
-
 function ab2str(buf) {
     return String.fromCharCode.apply(null, new Uint8Array(buf));
   }
@@ -75,8 +72,7 @@ function listener(event) {
         "검사 기기 ( " + product + " ) <br>" + 
         "F/W Version ( " +  FWversion + ver  +  " ) <br>" + 
         "사용횟수 : "  + Math.round(Number(testArray%1 * 100)) + " 회<br><br>" +
-        "검사 모드로 동작시켜주세요.<br> 정지버튼 누른상태에서 후진버튼 5회 누르면 검사모드로 동작됩니다. <br>" + 
-        jbBtn);
+        "검사 모드로 동작시켜주세요.<br> 정지버튼 누른상태에서 후진버튼 5회 누르면 검사모드로 동작됩니다. <br>");
 
     }
     else {
@@ -351,20 +347,21 @@ function test_message(input_device){
                 
             break;
         case 'T1':       
-        jbBtn.appendChild(jbBtnText);
-        document.body.appendChild(jbBtn);
         document.getElementById("TEST1").className = "main_grid_top_2_clear";
         document.getElementById("TEST2").className = "main_grid_top_2_run";
         document.getElementById("TEST3").className = "main_grid_top_2";
         document.getElementById("TEST4").className = "main_grid_top_2";
         document.getElementById("TEST5").classsName = "main_grid_top_2"; // 사용 횟수
         document.getElementById("TEST6").className = "main_grid_top_2";
+
+        var btn = document.createElement("button");
         viewTest("버튼 검사", 
         "버튼을 아래 순서대로 누르고 결과(정상 동작시 괄호안에 O표시 됨)를 확인한다. <br><br>" +
         " 전진 버튼 : (" + input[5].substr(3,1) + ") <br>" + 
         " 미세전진 버튼 : (" + input[5].substr(2,1) + ") <br>" + 
         " 정지 버튼 : (" + input[5].substr(1,1) + ") <br>" + 
         " 후진 버튼 : (" + input[5].substr(0,1) + ") <br><br>" + 
+        btn + "<br>"  + 
 
         " <font color='red' size='5'>불량 기준 및 대처 방안 </font><br>" +
                 " 검사자가 버튼을 누르기 전 O 표시가 되어있음 <br>" +
@@ -439,8 +436,10 @@ function test_message(input_device){
             document.getElementById("TEST4").className = "main_grid_top_2_clear";
             document.getElementById("TEST5").className = "main_grid_top_2_clear"; // 사용 횟수
             document.getElementById("TEST6").className = "main_grid_top_2_run";
+
+            var btn = document.createElement("button");
             viewTest("사용 횟수", 
-            "검사자는 사용 횟수 확인 <br> <font color='red'> (기본 1회) </font><br><br>");
+            "검사자는 사용 횟수 확인 <br> <font color='red'> (기본 1회) </font><br><br>" + btn);
             break;
         case 'T6':
             document.getElementById("TEST1").className = "main_grid_top_2_clear";
