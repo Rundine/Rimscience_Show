@@ -309,8 +309,8 @@ $(document).off("pageshow", "#start").on("pageshow", "#start", function(event, u
 });
 
 
-function test_message(input_device){
 
+function test_message(input_device){
     var input = input_device.split('\t'); 
     document.querySelector("#device_data").innerHTML = input_device;
     document.querySelector("#data_info").innerHTML =
@@ -360,7 +360,8 @@ function test_message(input_device){
 
         " <font color='red' size='5'>불량 기준 및 대처 방안 </font><br>" +
                 " 검사자가 버튼을 누르기 전 O 표시가 되어있음 <br>" +
-                "&nbsp&nbsp>버튼을 눌러보며 눌리는 소리가 나는지 확인하고, 버튼과 스위치 노브간 결합을 확인한다. ");
+                "&nbsp&nbsp>버튼을 눌러보며 눌리는 소리가 나는지 확인하고, 버튼과 스위치 노브간 결합을 확인한다. " +
+                document.createElement('Button') + "<br><br>");
             break;
         case 'T2':
             document.getElementById("TEST1").className = "main_grid_top_2_clear";
@@ -430,8 +431,7 @@ function test_message(input_device){
             document.getElementById("TEST5").className = "main_grid_top_2_clear"; // 사용 횟수
             document.getElementById("TEST6").className = "main_grid_top_2_run";
             viewTest("사용 횟수", 
-            "검사자는 사용 횟수 확인 <br> <font color='red'> (기본 1회) </font><br><br>" +
-            document.getElementById("number_of_use").show());
+            "검사자는 사용 횟수 확인 <br> <font color='red'> (기본 1회) </font><br><br>");
             break;
         case 'T6':
             document.getElementById("TEST1").className = "main_grid_top_2_clear";
