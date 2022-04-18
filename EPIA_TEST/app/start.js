@@ -347,7 +347,11 @@ function test_message(input_device){
                 " 2단계(버튼검사)로 진입하지않고 모터가 계속 뒤로 이동 하려함" + "&nbsp&nbsp> <font color='yellow'> 스위치 교체</font> ");
                 
             break;
-        case 'T1':            
+        case 'T1':       
+        var jbBtn = document.createElement('button');
+        var jbBtnText = document.createTextNode('Click');
+        jbBtn.appendChild(jbBtnText);
+        document.body.appendChild(jbBtn);     
         document.getElementById("TEST1").className = "main_grid_top_2_clear";
         document.getElementById("TEST2").className = "main_grid_top_2_run";
         document.getElementById("TEST3").className = "main_grid_top_2";
@@ -365,11 +369,7 @@ function test_message(input_device){
                 " 검사자가 버튼을 누르기 전 O 표시가 되어있음 <br>" +
                 "&nbsp&nbsp>버튼을 눌러보며 눌리는 소리가 나는지 확인하고, 버튼과 스위치 노브간 결합을 확인한다. ");
 
-                var jbBtn = document.createElement('button');
-                var jbBtnText = document.createTextNode('Click');
-                jbBtn.appendChild(jbBtnText);
-                document.body.appendChild(jbBtn);
-                document.head.appendChild(jbton);
+
             break;
         case 'T2':
             document.getElementById("TEST1").className = "main_grid_top_2_clear";
