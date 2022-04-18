@@ -349,7 +349,7 @@ function test_message(input_device){
         document.getElementById("TEST1").className = "main_grid_top_2_clear";
         document.getElementById("TEST2").className = "main_grid_top_2_run";
         document.getElementById("TEST3").className = "main_grid_top_2";
-        document.getElementById("TEST4").className = "main_grid_top_2";
+        document.getElementById("TEST4").className = "main_grid_top_2_clear";
         document.getElementById("TEST5").className = "main_grid_top_2_clear"; // 사용 횟수
         document.getElementById("TEST6").className = "main_grid_top_2";
         viewTest("버튼 검사", 
