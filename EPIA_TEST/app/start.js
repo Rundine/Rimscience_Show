@@ -324,10 +324,10 @@ function test_message(input_device){
             '<p>' +  input[6] + '</p>';  // moving
 
     if (input[4].substr(5,1) == 'O' ){
-        document.getElementById("TEST5").className = "main_grid_top_2_clear";
+        document.getElementById("TEST6").className = "main_grid_top_2_clear";
     }
     else {
-        document.getElementById("TEST5").className = "main_grid_top_2";
+        document.getElementById("TEST6").className = "main_grid_top_2";
     }
     switch(input[0]){
         case 'T0':            
@@ -347,8 +347,8 @@ function test_message(input_device){
             break;
         case 'T1':            
         document.getElementById("TEST1").className = "main_grid_top_2_clear";
-        document.getElementById("TEST2").className = "main_grid_top_2_run";
-        document.getElementById("TEST3").className = "main_grid_top_2";
+        document.getElementById("TEST2").className = "main_grid_top_2_clear";
+        document.getElementById("TEST3").className = "main_grid_top_2_run";
         document.getElementById("TEST4").className = "main_grid_top_2";
         document.getElementById("TEST5").className = "main_grid_top_2"; // 사용 횟수
         document.getElementById("TEST6").className = "main_grid_top_2";
@@ -419,7 +419,7 @@ function test_message(input_device){
                     "&nbsp&nbsp > <font color='yellow'> 재시험시 동일한 증상의 경우 모터를 교체한다. </font> <br>" + 
                     " 이동시간이 28초 이상 <br>" +
                     "&nbsp&nbsp > <font color='yellow'> 모터에 부하가 생기는 요소를 확인한다 (전선이 걸려 부하가 생김) </font> <br>" + 
-                    "&nbsp&nbsp > <font color='yellow'> 부하 요소가 없을 경우 모터를 교체한다. 으잉이이이이이이이이 </font> <br>" );
+                    "&nbsp&nbsp > <font color='yellow'> 부하 요소가 없을 경우 모터를 교체한다. </font> <br>" );
 
             break;
         case 'T5':
@@ -430,7 +430,7 @@ function test_message(input_device){
             document.getElementById("TEST5").className = "main_grid_top_2_clear"; // 사용 횟수
             document.getElementById("TEST6").className = "main_grid_top_2_run";
             viewTest("사용 횟수", 
-            "검사자는 테스트 할 횟수를 입력하시오 <br> <font color='red'> (기본 100회) </font><br><br>" );
+            "검사자는 사용 횟수 확인 <br> <font color='red'> (기본 1회) </font><br><br>");
             break;
         case 'T6':
             document.getElementById("TEST1").className = "main_grid_top_2_clear";
@@ -440,7 +440,8 @@ function test_message(input_device){
             document.getElementById("TEST5").className = "main_grid_top_2_clear"; // 사용 횟수
             document.getElementById("TEST6").className = "main_grid_top_2_clear";
             viewTest("검사 완료", 
-            "제품 검사 완료. <br> 데이터 송신관련 테스트는 우측 wRITING TEST 버튼을 눌러주세요.[option] <br><br>" );
+            "제품 검사 완료. <br> 데이터 송신관련 테스트는 우측 wRITING TEST 버튼을 눌러주세요.[option] <br><br>" + 
+            "");
             break;
         default:
 
