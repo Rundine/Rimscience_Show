@@ -362,8 +362,7 @@ function test_message(input_device){
                 " 검사자가 버튼을 누르기 전 O 표시가 되어있음 <br>" +
                 "&nbsp&nbsp>버튼을 눌러보며 눌리는 소리가 나는지 확인하고, 버튼과 스위치 노브간 결합을 확인한다. ");
 
-        document.getElementById("input_count_number").style.display="block";
-        document.getElementById("button_input_count_number").style.display="block";
+
 
             break;
         case 'T2':
@@ -374,8 +373,6 @@ function test_message(input_device){
             document.getElementById("TEST5").className = "main_grid_top_2"; // 사용 횟수
             document.getElementById("TEST6").className = "main_grid_top_2";
 
-            document.getElementById("input_count_number").style.display="none";
-            document.getElementById("button_input_count_number").style.display="none";
             viewTest("센서 검사", 
             "센서를 손으로 힘을 가해보며 값의 변화를 검사한다. 정상 동작시 전진버튼을 누르면 다음 단계로 넘어갑니다. <br><br>" +
             " force : ( " + input[1] + " ) [ gf ] <br><br>" +  
@@ -436,10 +433,13 @@ function test_message(input_device){
             document.getElementById("TEST5").className = "main_grid_top_2_clear"; // 사용 횟수
             document.getElementById("TEST6").className = "main_grid_top_2_run";
 
-
             //document.getElementById("button_input_count_number").style.display="block";
             viewTest("사용 횟수", 
             "검사자는 사용 횟수 확인 <br> <font color='red'> (기본 1회) </font><br><br>");
+
+            document.getElementById("input_count_number").style.display="block";
+            document.getElementById("button_input_count_number").style.display="block";
+            
             break;
         case 'T6':
             document.getElementById("TEST1").className = "main_grid_top_2_clear";
@@ -449,6 +449,8 @@ function test_message(input_device){
             document.getElementById("TEST5").className = "main_grid_top_2_clear"; // 사용 횟수
             document.getElementById("TEST6").className = "main_grid_top_2_clear";
 
+            document.getElementById("input_count_number").style.display="none";
+            document.getElementById("button_input_count_number").style.display="none";
 
             viewTest("검사 완료", 
             "제품 검사 완료. <br> 데이터 송신관련 테스트는 우측 wRITING TEST 버튼을 눌러주세요.[option] <br><br>" );
