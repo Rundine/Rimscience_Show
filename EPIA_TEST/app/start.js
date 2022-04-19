@@ -309,7 +309,6 @@ $(document).off("pageshow", "#start").on("pageshow", "#start", function(event, u
     $("#btn_start").focus();
 });
 
-
 function test_message(input_device){
     var input = input_device.split('\t'); 
     document.querySelector("#device_data").innerHTML = input_device;
@@ -353,20 +352,7 @@ function test_message(input_device){
         document.getElementById("TEST5").className = "main_grid_top_2"; // 사용 횟수
         document.getElementById("TEST6").className = "main_grid_top_2";
 
-        /*var btn = document.createElement("button");
-        btn.innerText = "Submit";
-        document.getElementById("test_detail").append(btn); */
-
-        var btn = document.createElement("BUTTON");        // Create a <button> element
-        var t = document.createTextNode("CLICK ME");       // Create a text node
-        btn.appendChild(t);                                // Append the text to <button>
-        document.getElementById("main_grid_top_1").appendChild(btn);
-        document.getElementById("start_main_grid_wrapper").appendChild(btn);
-        document.getElementById("start_main_grid").appendChild(btn);     
-   
-
-
-
+        document.getElementById("toggle_id").hidden();
         viewTest("버튼 검사", 
         "버튼을 아래 순서대로 누르고 결과(정상 동작시 괄호안에 O표시 됨)를 확인한다. <br><br>" +
         " 전진 버튼 : (" + input[5].substr(3,1) + ") <br>" + 
@@ -452,7 +438,7 @@ function test_message(input_device){
             document.getElementById("TEST6").className = "main_grid_top_2_run";
 
             viewTest("사용 횟수", 
-            "검사자는 사용 횟수 확인 <br> <font color='red'> (기본 1회) </font><br><br>" + btn);
+            "검사자는 사용 횟수 확인 <br> <font color='red'> (기본 1회) </font><br><br>");
             break;
         case 'T6':
             document.getElementById("TEST1").className = "main_grid_top_2_clear";
