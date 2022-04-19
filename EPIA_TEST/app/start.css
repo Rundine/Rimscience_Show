@@ -1035,7 +1035,15 @@ div.start_chartContainer {
 }
 
 .small_input {
-  resize: both;
+  position: relative;
+  width: 30%;
+  width: 5px;
+  height: 5px;
+}
+
+.button_input{
+  position: fixed;
+  width: 30%;
   width: 5px;
   height: 5px;
   border : 1px solid #58bccb;
