@@ -435,11 +435,11 @@ function test_message(input_device){
 
             //document.getElementById("button_input_count_number").style.display="block";
             viewTest("사용 횟수", 
-            "검사자는 사용 횟수 확인 <br> <font color='red'> (기본 1회) </font><br><br>");
+            "<br><br> 검사자는 사용 횟수 확인 <br> <font color='red'> (기본 1회) </font><br><br>");
 
             document.getElementById("input_count_number").style.display="block";
             document.getElementById("button_input_count_number").style.display="block";
-            
+
             break;
         case 'T6':
             document.getElementById("TEST1").className = "main_grid_top_2_clear";

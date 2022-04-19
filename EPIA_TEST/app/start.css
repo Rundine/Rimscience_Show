@@ -1040,10 +1040,12 @@ div.start_chartContainer {
   right: 10px;
   left: 3px;
   height: 5px;
+  margin-bottom:30px;
 }
 
 .button_input{
   position: static;
+  margin-bottom: 25px;
   width: 30%;
   width: 5px;
   height: 5px;
