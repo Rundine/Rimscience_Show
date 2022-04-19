@@ -351,8 +351,6 @@ function test_message(input_device){
         document.getElementById("TEST4").className = "main_grid_top_2";
         document.getElementById("TEST5").className = "main_grid_top_2"; // 사용 횟수
         document.getElementById("TEST6").className = "main_grid_top_2";
-
-        document.getElementById("input_count_number").style.display="block";
         viewTest("버튼 검사", 
         "버튼을 아래 순서대로 누르고 결과(정상 동작시 괄호안에 O표시 됨)를 확인한다. <br><br>" +
         " 전진 버튼 : (" + input[5].substr(3,1) + ") <br>" + 
@@ -433,7 +431,8 @@ function test_message(input_device){
             document.getElementById("TEST5").className = "main_grid_top_2_clear"; // 사용 횟수
             document.getElementById("TEST6").className = "main_grid_top_2_run";
 
-            document.getElementById("input_count_number").style.display="";
+            document.getElementById("input_count_number").style.display="block";
+            document.getElementById("button_input_count_number").style.display="block";
             //document.getElementById("button_input_count_number").style.display="block";
             viewTest("사용 횟수", 
             "검사자는 사용 횟수 확인 <br> <font color='red'> (기본 1회) </font><br><br>");
@@ -445,6 +444,9 @@ function test_message(input_device){
             document.getElementById("TEST4").className = "main_grid_top_2_clear";
             document.getElementById("TEST5").className = "main_grid_top_2_clear"; // 사용 횟수
             document.getElementById("TEST6").className = "main_grid_top_2_clear";
+
+            document.getElementById("input_count_number").style.display="none";
+            document.getElementById("button_input_count_number").style.display="none";
             viewTest("검사 완료", 
             "제품 검사 완료. <br> 데이터 송신관련 테스트는 우측 wRITING TEST 버튼을 눌러주세요.[option] <br><br>" );
             break;
