@@ -1035,8 +1035,8 @@ div.start_chartContainer {
 }
 
 .small_input {
-  width: 20px;
-  height: 20px;
+  width: 5px;
+  height: 5px;
   border : 1px solid #58bccb;
   background-color: #58bccb;
   color : #58bccb;
