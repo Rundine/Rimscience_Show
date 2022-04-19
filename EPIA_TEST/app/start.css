@@ -1034,13 +1034,13 @@ div.start_chartContainer {
   color:#f0f0f0;
 }
 
-.cell-wrapper > .input_number{
+.input_number{
   position: relative;
   top: 30px;
   left: 30px;
 }
 
-.cell-wrapper > .input_button{
+.input_button{
   position: absolute;
   bottom: 30px;
   right: 30px;
