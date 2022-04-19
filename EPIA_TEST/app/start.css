@@ -1036,8 +1036,9 @@ div.start_chartContainer {
 
 .small_input {
   position: relative;
-  width: 30%;
-  width: 5px;
+  top: 5px;
+  right: 10px;
+  left: 3px;
   height: 5px;
 }
 
