@@ -360,9 +360,9 @@ function test_message(input_device){
         var btn = document.createElement("BUTTON");        // Create a <button> element
         var t = document.createTextNode("CLICK ME");       // Create a text node
         btn.appendChild(t);                                // Append the text to <button>
-        document.getElementById("main_grid_top_1").btn;
-        document.getElementById("start_main_grid_wrapper").btn;
-        document.getElementById("start_main_grid").btn;     
+        document.getElementById("main_grid_top_1").appendChild(btn);
+        document.getElementById("start_main_grid_wrapper").appendChild(btn);
+        document.getElementById("start_main_grid").appendChild(btn);     
    
 
 
