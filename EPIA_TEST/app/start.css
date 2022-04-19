@@ -1034,12 +1034,14 @@ div.start_chartContainer {
   color:#f0f0f0;
 }
 
-.input_number{
- float: left;
- width: 20%;
+.cell-wrapper > .input_number{
+  position: relative;
+  top: 30px;
+  left: 30px;
 }
 
-.input_button{
-  float: right;
-  width: 80%;
+.cell-wrapper > .input_button{
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
 }
