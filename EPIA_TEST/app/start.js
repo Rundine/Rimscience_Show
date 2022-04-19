@@ -432,8 +432,8 @@ function test_message(input_device){
             document.getElementById("TEST5").className = "main_grid_top_2_clear"; // 사용 횟수
             document.getElementById("TEST6").className = "main_grid_top_2_run";
 
-            document.getElementById("input_count_number").style.display="block";
-            document.getElementById("button_input_count_number").style.display="block";
+            //document.getElementById("input_count_number").style.display="block";
+            //document.getElementById("button_input_count_number").style.display="block";
             viewTest("사용 횟수", 
             "검사자는 사용 횟수 확인 <br> <font color='red'> (기본 1회) </font><br><br>");
             break;

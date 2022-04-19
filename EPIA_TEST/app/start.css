@@ -1033,3 +1033,11 @@ div.start_chartContainer {
   line-height: 20px;
   color:#f0f0f0;
 }
+
+.small_input {
+  width: 20px;
+  height: 20px;
+  border : 1px solid #58bccb;
+  background-color: #58bccb;
+  color : #58bccb;
+}
