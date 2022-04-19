@@ -1034,22 +1034,12 @@ div.start_chartContainer {
   color:#f0f0f0;
 }
 
-.small_input {
-  position: static;
-  top: 5px;
-  right: 10px;
-  left: 3px;
-  height: 5px;
-  margin-bottom:30px;
+.input_number{
+ float: left;
+ width: 20%;
 }
 
-.button_input{
-  position: static;
-  margin-bottom: 25px;
-  width: 30%;
-  width: 5px;
-  height: 5px;
-  border : 1px solid #58bccb;
-  background-color: #58bccb;
-  color : #58bccb;
+.input_button{
+  float: right;
+  width: 80%;
 }
