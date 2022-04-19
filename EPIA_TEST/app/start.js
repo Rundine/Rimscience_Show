@@ -376,6 +376,11 @@ function test_message(input_device){
             document.getElementById("TEST4").className = "main_grid_top_2";
             document.getElementById("TEST5").className = "main_grid_top_2"; // 사용 횟수
             document.getElementById("TEST6").className = "main_grid_top_2";
+
+            var  btn = document.createElement("Button");
+            btn.innerText = 'this button'
+            document.getElementById('test_detail').appendChild(btn);
+
             viewTest("센서 검사", 
             "센서를 손으로 힘을 가해보며 값의 변화를 검사한다. 정상 동작시 전진버튼을 누르면 다음 단계로 넘어갑니다. <br><br>" +
             " force : ( " + input[1] + " ) [ gf ] <br><br>" +  
