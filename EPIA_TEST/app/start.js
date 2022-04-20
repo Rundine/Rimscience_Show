@@ -27,7 +27,7 @@ function listener(event) {
     let forceArray = new Uint8Array(4); // 4byte
     let positionArray = new Uint8Array(4);
     let timeArray = new Uint8Array(4);
-    let commandArray =new Uint8Array(4);
+    let commandArray =new Uint8Array(4); 
     let testArray =new Uint8Array(4);
     // Uint8Array : 1바이트 크기의 부호없는 정수. C의 unsigned char 형과 동일
 
@@ -49,7 +49,7 @@ function listener(event) {
         // reverse() : 반전
         // getFloat() : '개발자'가 직접 선언함(아래에)
 
-        forceArray = Math.round(forceArray*10)/10;
+        //forceArray = Math.round(forceArray*10)/10; // Math.round() : 소수점 이하를 반올림
         positionArray = Math.round(positionArray*1000)/1000;
         positionArray = positionArray - position_sub;
 
