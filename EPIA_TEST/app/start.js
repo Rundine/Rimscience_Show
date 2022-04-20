@@ -311,7 +311,7 @@ $(document).off("pageshow", "#start").on("pageshow", "#start", function(event, u
 
 
 function button_number_input(){
-    alert("버튼1을 눌르셨습니다.");
+    alert("버튼 확인");
 }
 function test_message(input_device){
     var input = input_device.split('\t'); 
