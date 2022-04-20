@@ -311,7 +311,7 @@ $(document).off("pageshow", "#start").on("pageshow", "#start", function(event, u
 
 
 function button_number_input(){
-    var number = document.getElementById("input_count_number");
+    var number = document.getElementById("input_count_number").value;
     alert(number + "값 전달");
 }
 function test_message(input_device){
