@@ -311,7 +311,8 @@ $(document).off("pageshow", "#start").on("pageshow", "#start", function(event, u
 
 
 function button_number_input(){
-    alert("버튼 확인");
+    var number = document.getElementById("input_count_number");
+    alert(number + "값 전달");
 }
 function test_message(input_device){
     var input = input_device.split('\t'); 
@@ -455,9 +456,9 @@ function test_message(input_device){
 
             document.getElementById("input_count_number").style.display="none";
             document.getElementById("button_input_count_number").style.display="none";
-            document.getElementById("button_input_count_number").onclick = function(){
+            /*document.getElementById("button_input_count_number").onclick = function(){
                 button_number_input()
-            };
+            };*/
 
             viewTest("검사 완료", 
             "제품 검사 완료. <br> 데이터 송신관련 테스트는 우측 wRITING TEST 버튼을 눌러주세요.[option] <br><br>" );
