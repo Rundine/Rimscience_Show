@@ -38,7 +38,6 @@ function listener(event) {
     document.querySelector("#device_data_length"). innerHTML =value.byteLength;
 
 
-
     if( value.byteLength == 22){
         forceArray = getFloat(tmpResult.slice(2,6).reverse());
         positionArray = getFloat(tmpResult.slice(6,10).reverse());
@@ -47,7 +46,7 @@ function listener(event) {
         testArray = getFloat(tmpResult.slice(18,22).reverse());
         // slice() : 배열의 일부분을 선택하여 새로운 배열 만듬, slice(start, end) : start+1 ~ end까지 배열 선택
         // reverse() : 반전
-        // getFloat() : '개발자'가 직접 선언함(아래에)
+        // getFloat() : 전체 array 값 들 중 부분을 잘라서 새로운 array를 만들어 배열. 자세한 건 '개발자'가 직접 선언함(아래에)
 
         forceArray = Math.round(forceArray*10)/10; // Math.round() : 소수점 이하를 반올림
         positionArray = Math.round(positionArray*1000)/1000;
@@ -85,13 +84,13 @@ function listener(event) {
         for (let i = 0; i < value.byteLength; i++) {
             input_device += String.fromCharCode(tmpResult[i]);
         }
-      test_message(input_device);
+      test_message(input_device); // function test_message() : 
     }
 
 }
 
 
-// 
+// getFloat() 의미 : 전체 array 값 들 중 부분을 잘라서 새로운 array를 만들어 배열
 function getFloat(array) {
     var view = new DataView(new ArrayBuffer(4)); // ArrayBuffer() : 2진 데이터 버퍼
 
@@ -190,14 +189,11 @@ class VETPIA {
 
 function start_js() {
 
-
-
     var start_onLoad = function() {
         start_elementsExtraJS();
         start_deviceEvents();
         start_windowEvents();
         start_elementsEvents();
-
 
         let vetpia = new VETPIA();
         document.querySelector('#btn_start').addEventListener('click', event => {
@@ -229,8 +225,8 @@ function start_js() {
             vetpia.writeData(userDescription);
             
         });
-        
 
+        // 상단 중앙 글
         viewInfo("EPIA(VETPIA) TEST 1.1.0");
        // viewTest("EPIA(VETPIA) TEST", 
        // "EPIA(VETPIA) TEST <br>" );
@@ -318,11 +314,12 @@ $(document).off("pageshow", "#start").on("pageshow", "#start", function(event, u
 });
 
 
+// 횟수 입력 값 버튼으로 전달(Test 용)
 function button_number_input(){
     var number_11 = document.getElementById("input_count_number").value;
     alert(number_11 + " 값 전달");
-    //alert("값 전달");
 }
+
 function test_message(input_device){
     var input = input_device.split('\t'); 
     document.querySelector("#device_data").innerHTML = input_device;
@@ -375,8 +372,6 @@ function test_message(input_device){
         " <font color='red' size='5'>불량 기준 및 대처 방안 </font><br>" + 
                 " 검사자가 버튼을 누르기 전 O 표시가 되어있음 <br>" +
                 "&nbsp&nbsp>버튼을 눌러보며 눌리는 소리가 나는지 확인하고, 버튼과 스위치 노브간 결합을 확인한다. ");
-
-
 
             break;
         case 'T2':
@@ -446,11 +441,10 @@ function test_message(input_device){
             document.getElementById("TEST4").className = "main_grid_top_2_clear";
             document.getElementById("TEST5").className = "main_grid_top_2_clear"; // 사용 횟수
             document.getElementById("TEST6").className = "main_grid_top_2_run";
-
-            //document.getElementById("button_input_count_number").style.display="block";
             viewTest("사용 횟수", 
             "<br><br> 검사자는 사용 횟수 확인 <br> <font color='red'> (기본 1회) </font><br><br>");
-
+            
+            // 숨겨져 있는 숫자 입력 text, button 보이기
             document.getElementById("input_count_number").style.display="block";
             document.getElementById("button_input_count_number").style.display="block";
 
@@ -463,11 +457,10 @@ function test_message(input_device){
             document.getElementById("TEST5").className = "main_grid_top_2_clear"; // 사용 횟수
             document.getElementById("TEST6").className = "main_grid_top_2_clear";
 
+            // 숫자 입력 text, button 숨김
             document.getElementById("input_count_number").style.display="none";
             document.getElementById("button_input_count_number").style.display="none";
-            /*document.getElementById("button_input_count_number").onclick = function(){
-                button_number_input()
-            };*/
+
 
             viewTest("검사 완료", 
             "제품 검사 완료. <br> 데이터 송신관련 테스트는 우측 wRITING TEST 버튼을 눌러주세요.[option] <br><br>" );
