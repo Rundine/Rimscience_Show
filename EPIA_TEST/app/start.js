@@ -24,13 +24,15 @@ function str2ab(str) {
 function listener(event) {
     const value = event.target.value;
     let tmpResult = [];
-    let forceArray = new Uint8Array(4);
+    let forceArray = new Uint8Array(4); // 4byte
     let positionArray = new Uint8Array(4);
     let timeArray = new Uint8Array(4);
     let commandArray =new Uint8Array(4);
     let testArray =new Uint8Array(4);
+    // Uint8Array : 1바이트 크기의 부호없는 정수. C의 unsigned char 형과 동일
+
     for (let i = 0; i < value.byteLength; i++) {
-        tmpResult.push(value.getUint8(i));
+        tmpResult.push(value.getUint8(i)); // getUnit8(byteOffset) : 정렬 제약 조건 없이 다중 바이트 값은 모든 오프셋에서 가져옴. byteOffset : 데이터를 읽을 뷰의 시작 부분부터 byte임.
     }
     
     document.querySelector("#device_data_length"). innerHTML =value.byteLength;
@@ -43,6 +45,9 @@ function listener(event) {
         timeArray = getFloat(tmpResult.slice(10,14).reverse());
         commandArray = getFloat(tmpResult.slice(14,18).reverse());
         testArray = getFloat(tmpResult.slice(18,22).reverse());
+        // slice() : 배열의 일부분을 선택하여 새로운 배열 만듬, slice(start, end) : start+1 ~ end까지 배열 선택
+        // reverse() : 반전
+        // getFloat() : '개발자'가 직접 선언함(아래에)
 
         forceArray = Math.round(forceArray*10)/10;
         positionArray = Math.round(positionArray*1000)/1000;
@@ -85,12 +90,15 @@ function listener(event) {
 
 }
 
+
+// 
 function getFloat(array) {
-    var view = new DataView(new ArrayBuffer(4));
-        array.forEach(function (b, i) {
-        view.setUint8(i, b);
+    var view = new DataView(new ArrayBuffer(4)); // ArrayBuffer() : 2진 데이터 버퍼
+
+    array.forEach(function (b, i) { // forEach() : arry에 있는 요소들을 순서대로 호출 (b, i) : b = element i = index
+        view.setUint8(i, b); // setUin8(byteOffset, value), byteOffest : 데이터를 저장할 뷰 시작 부분의 바이트입니다., value : 설정한 값
     });
-    return view.getFloat32(0);
+    return view.getFloat32(0); // 부호있는 32 비트 부동 소수점 숫자 반환
 }
 
 function viewInfo (str) {
