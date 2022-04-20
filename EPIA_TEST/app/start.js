@@ -312,7 +312,7 @@ $(document).off("pageshow", "#start").on("pageshow", "#start", function(event, u
 
 function button_number_input(){
     var number_11 = document.getElementById("input_count_number").value;
-    alert(number_11 + "&nbsp;값 전달");
+    alert(number_11 + " 값 전달");
     //alert("값 전달");
 }
 function test_message(input_device){
