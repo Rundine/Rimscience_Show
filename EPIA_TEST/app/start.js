@@ -49,7 +49,7 @@ function listener(event) {
         // reverse() : 반전
         // getFloat() : '개발자'가 직접 선언함(아래에)
 
-        //forceArray = Math.round(forceArray*10)/10; // Math.round() : 소수점 이하를 반올림
+        forceArray = Math.round(forceArray*10)/10; // Math.round() : 소수점 이하를 반올림
         positionArray = Math.round(positionArray*1000)/1000;
         positionArray = positionArray - position_sub;
 
