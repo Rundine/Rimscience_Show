@@ -30,6 +30,7 @@ function listener(event) {
     let commandArray =new Uint8Array(4); 
     let testArray =new Uint8Array(4);
     // Uint8Array : 1바이트 크기의 부호없는 정수. C의 unsigned char 형과 동일
+    let maxUsedCount = new Uint8Array(4); // 최대 사용 횟수 
 
     for (let i = 0; i < value.byteLength; i++) {
         tmpResult.push(value.getUint8(i)); // getUnit8(byteOffset) : 정렬 제약 조건 없이 다중 바이트 값은 모든 오프셋에서 가져옴. byteOffset : 데이터를 읽을 뷰의 시작 부분부터 byte임.
@@ -38,12 +39,13 @@ function listener(event) {
     document.querySelector("#device_data_length"). innerHTML =value.byteLength;
 
 
-    if( value.byteLength == 22){
+    if( value.byteLength == 26){ // 원래 22
         forceArray = getFloat(tmpResult.slice(2,6).reverse());
         positionArray = getFloat(tmpResult.slice(6,10).reverse());
         timeArray = getFloat(tmpResult.slice(10,14).reverse());
         commandArray = getFloat(tmpResult.slice(14,18).reverse());
         testArray = getFloat(tmpResult.slice(18,22).reverse());
+        maxUsedCount = getFloat(tmpResult.slice(22,26).reverse()); // 최대사용 횟수
         // slice() : 배열의 일부분을 선택하여 새로운 배열 만듬, slice(start, end) : start+1 ~ end까지 배열 선택
         // reverse() : 반전
         // getFloat() : 전체 array 값 들 중 부분을 잘라서 새로운 array를 만들어 배열. 자세한 건 '개발자'가 직접 선언함(아래에)
@@ -59,6 +61,8 @@ function listener(event) {
         message1 += "<br> TIME : " + timeArray;
         message1 += "<br> COMMAND : " + commandArray;
         message1 += "<br> TEST : " + testArray;
+        message1 += "<br> MAXUSEDCOUNT : " + maxUsedCount; // 최대 사용 횟수
+        
 
         document.querySelector("#device_data"). innerHTML =message1;
         document.querySelector("#data_info").innerHTML = "";
