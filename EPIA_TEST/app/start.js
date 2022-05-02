@@ -101,7 +101,7 @@ function getFloat(array) {
     array.forEach(function (b, i) { // forEach() : arry에 있는 요소들을 순서대로 호출 (b, i) : b = element i = index
         view.setUint8(i, b); // setUin8(byteOffset, value), byteOffest : 데이터를 저장할 뷰 시작 부분의 바이트입니다., value : 설정한 값
     });
-    return view.getFloat32(0); // 부호있는 32 비트 부동 소수점 숫자 반환
+    return view.getFloat32(0); // 부호있는 32 비트 부동 소수점 숫자 반환한다
 }
 
 function viewInfo (str) {
@@ -433,7 +433,7 @@ function test_message(input_device){
                     " 75mm 이전에 멈추거나 이동거리가 증가하지않음 <br>" +
                     "&nbsp&nbsp > <font color='yellow'> 모터 뒷단에 홀 센서가 떨어져있는지 확인하여 떨어져있는 경우 가까이 붙이고 재시험한다. </font> <br>" +
                     "&nbsp&nbsp > <font color='yellow'> 재시험시 동일한 증상의 경우 모터를 교체한다. </font> <br>" + 
-                    " 이동시간이 28초 이상 <br>" +
+                    " 이동시간이 28초 이상 <br>" + 
                     "&nbsp&nbsp > <font color='yellow'> 모터에 부하가 생기는 요소를 확인한다 (전선이 걸려 부하가 생김) </font> <br>" + 
                     "&nbsp&nbsp > <font color='yellow'> 부하 요소가 없을 경우 모터를 교체한다. </font> <br>" );
 
